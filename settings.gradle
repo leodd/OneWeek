@@ -1,0 +1,3 @@
+include ':app', ':calendarview-library'
+
+project(':calendarview-library').projectDir = new File('../OneWeek/calendarview-library')

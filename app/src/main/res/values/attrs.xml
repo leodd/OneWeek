@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WeekView">
+        <attr name="week" format="integer"/>
+        <attr name="touch_ability" format="boolean"/>
+        <attr name="background_color" format="color|integer"/>
+        <attr name="selected_background_color" format="color|integer"/>
+        <attr name="text_color" format="color|integer"/>
+        <attr name="selected_text_color" format="color|integer"/>
+        <attr name="radius_of_corner" format="dimension"/>
+        <attr name="inner_margin" format="dimension"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="is_show_background" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="Rotate3dAnimation">
+        <attr name="rollType" format="enum">
+            <enum name="x" value="0"/>
+            <enum name="y" value="1"/>
+            <enum name="z" value="2"/>
+        </attr>
+        <attr name="fromDeg" format="float" />
+        <attr name="toDeg" format="float" />
+        <attr name="pivotX" format="fraction"/>
+        <attr name="pivotY" format="fraction" />
+    </declare-styleable>
+
+    <declare-styleable name="TimePickerView">
+        <attr name="tm_is_loop" format="boolean"/>
+        <attr name="tm_gap" format="dimension"/>
+        <attr name="tm_radius_of_corner" format="dimension"/>
+        <attr name="tm_background_color" format="color|integer"/>
+        <attr name="tm_indicator_color" format="color|integer"/>
+        <attr name="tm_text_color" format="color|integer"/>
+        <attr name="tm_text_size" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="WeekPagerIndicator">
+        <attr name="wpi_color" format="color|integer"/>
+        <attr name="wpi_day_text_size" format="dimension"/>
+        <attr name="wpi_week_text_size" format="dimension"/>
+        <attr name="wpi_radius_of_corner" format="dimension"/>
+    </declare-styleable>
+
+</resources>

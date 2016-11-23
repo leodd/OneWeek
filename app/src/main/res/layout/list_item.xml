@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/selected_rectangle"
+    android:elevation="1dp">
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorSoftBlue"
+        android:layout_alignBottom="@+id/list_item_content"
+        android:layout_alignTop="@+id/list_item_time"
+        android:layout_marginTop="3dp"
+        android:visibility="visible"
+        android:id="@+id/view" />
+
+    <TextView
+        android:id="@+id/list_item_time"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:text="12时60分"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"/>
+
+    <com.leodd.oneweek.Views.WeekView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:id="@+id/week_view_of_list_item"
+        app:inner_margin="2dp"
+        app:radius_of_corner="11dp"
+        app:selected_background_color="@color/colorSoftBlue"
+        app:text_size="11sp"
+        app:text_color="@color/colorGray"
+        app:selected_text_color="@color/colorWhite"
+        android:visibility="visible"
+        android:layout_toRightOf="@+id/list_item_time"
+        android:layout_toEndOf="@id/list_item_time"
+        android:layout_alignTop="@id/list_item_time"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/list_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:text="则里面，就有信息以提高性能。"
+        android:textSize="15sp"
+        android:textColor="@color/colorSoftTextGray"
+        android:layout_below="@+id/list_item_time"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="5dp"/>
+
+</RelativeLayout>
