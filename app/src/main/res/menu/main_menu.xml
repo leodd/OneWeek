@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_locate"
+        android:icon="@drawable/locate_icon"
+        app:showAsAction="ifRoom"
+        android:title="Locate">
+    </item>
+    <item
+        android:id="@+id/menu_calendar"
+        android:icon="@drawable/date_icon"
+        app:showAsAction="ifRoom"
+        android:title="Calendar">
+    </item>
+</menu>

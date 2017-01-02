@@ -5,9 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.leodd.oneweek.Helper.ServerDBHelper;
-import com.leodd.oneweek.Utils.TableUtil;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -246,6 +243,42 @@ public class ServerDAO implements IServerDAO {
             db = dbHelper.getWritableDatabase();
 
             db.execSQL("DROP TABLE " + table);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+        }
+
+        return true;
+    }
+
+    @Override
+    public boolean update(String string) {
+        SQLiteDatabase db = null;
+
+        try {
+            db = dbHelper.getWritableDatabase();
+            db.execSQL(string);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+        }
+
+        return true;
+    }
+
+    @Override
+    public boolean update(String table, int id, ContentValues contentValues) {
+        SQLiteDatabase db = null;
+
+        try {
+            db = dbHelper.getWritableDatabase();
+            db.update(table, contentValues, "_id = ?", new String[] {String.valueOf(id)});
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

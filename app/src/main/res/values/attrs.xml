@@ -2,7 +2,7 @@
 <resources>
 
     <declare-styleable name="WeekView">
-        <attr name="week" format="integer"/>
+        <attr name="dayOfWeek" format="integer"/>
         <attr name="touch_ability" format="boolean"/>
         <attr name="background_color" format="color|integer"/>
         <attr name="selected_background_color" format="color|integer"/>

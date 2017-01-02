@@ -12,7 +12,7 @@ import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 
-import com.leodd.oneweek.Views.Rotate3dAnimation;
+import com.leodd.oneweek.Widget.Rotate3dAnimation;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

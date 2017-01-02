@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/one_day_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"/>
+
+    <FrameLayout
+        android:id="@+id/one_day_image_nothing"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="top|center_horizontal">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:src="@drawable/no_event_image"
+            android:alpha="0.54"
+            android:layout_gravity="top|center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="OMG!\nNo events here!"
+            android:layout_gravity="bottom|center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-medium"
+            android:alpha="0.38"/>
+
+    </FrameLayout>
+
+</FrameLayout>

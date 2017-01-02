@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:layout_margin="5dp"
+        android:elevation="2dp">
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/plan_edit_go_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="start"
+            android:src="@drawable/goback_icon"
+            android:background="?selectableItemBackgroundBorderless"
+            android:alpha="0.54"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/plan_edit_confirm"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/check_icon"
+            android:background="?selectableItemBackgroundBorderless"
+            android:alpha="0.54"/>
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/plan_edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Type your plan here"
+            android:background="@color/colorNone"
+            android:layout_gravity="center"
+            android:textSize="16sp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:alpha="0.87">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/plan_edit_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:text="00:00"
+                android:fontFamily="sans-serif-thin"
+                android:textSize="50sp"
+                android:textColor="@color/colorBlack"
+                android:alpha="0.87"
+                android:clickable="true"
+                android:background="?selectableItemBackgroundBorderless"/>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:text="Repeat"
+                android:paddingStart="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="16sp"
+                android:alpha="0.87"
+                android:id="@+id/plan_edit_repeat_checkbox" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/plan_edit_dayofweek_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="13dp"
+                android:orientation="horizontal"/>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/plan_edit_alarm_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="13dp"
+                android:text="Alarm"
+                android:paddingStart="10dp"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:alpha="0.87"/>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/plan_edit_delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="start"
+                android:src="@drawable/delete_icon"
+                android:tint="@color/colorAccent"
+                android:background="?selectableItemBackgroundBorderless"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
