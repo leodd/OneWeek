@@ -1,12 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#45000000">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/alarm_activity_base_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/textView_time_alarm_activity"
-        android:text="现在时间是。。是几点呢"/>
+        android:layout_height="match_parent">
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/alarm_activity_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="00:00"
+                android:textColor="@color/colorWhite"
+                android:textSize="70sp"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/alarm_activity_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="100dp"
+                android:text="your current plan"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-medium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Swipe up to stop"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:textAlignment="center"/>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/arrow_up_icon"
+                android:tint="@color/colorWhite"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "com.leodd.oneweek"
-        minSdkVersion 21
-        targetSdkVersion 23
+        minSdkVersion 14
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }

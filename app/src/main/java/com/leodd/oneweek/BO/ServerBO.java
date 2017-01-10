@@ -95,13 +95,13 @@ public class ServerBO implements IServerBO {
         temp1 = serverDAO.queryMulti("SELECT * FROM " + TableUtil.TABLE_NORMAL_PLAN +
                 " WHERE date LIKE '" + calendarDate.getDateString() + "' AND " +
                 "time > time('" + calendarDate.getTimeString() + "') " +
-                "ORDER BY time DESC " +
+                "ORDER BY time ASC " +
                 "LIMIT 1");
 
         temp2 = serverDAO.queryMulti("SELECT * FROM " + TableUtil.TABLE_RECYCLE_PLAN +
                 " WHERE week LIKE '" + dayOfWeek + "' AND " +
                 "time > time('" + calendarDate.getTimeString() + "') " +
-                "ORDER BY time DESC " +
+                "ORDER BY time ASC " +
                 "LIMIT 1");
 
         if(temp1.size() != 0 && temp2.size() != 0) {

@@ -1,5 +1,6 @@
 package com.leodd.oneweek.UI;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.design.widget.FloatingActionButton;
@@ -17,6 +18,7 @@ import com.leodd.oneweek.BO.IPlanBO;
 import com.leodd.oneweek.BO.PlanBO;
 import com.leodd.oneweek.Models.Plan;
 import com.leodd.oneweek.R;
+import com.leodd.oneweek.Service.AlarmServiceReceiver;
 import com.leodd.oneweek.UI.DayPageUI.OneDayFragment;
 import com.leodd.oneweek.Utils.CalendarDate;
 import com.leodd.oneweek.Utils.CustomizeFragmentPagerAdapter;
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         planBO = new PlanBO(this);
         refreshTodoText();
+        callAlarmService();
 
         addButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         viewPager = (ViewPager) findViewById(R.id.main_view_pager);
@@ -143,13 +146,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void refreshTodoText() {
-        Plan plan = planBO.getCurrentPlan();
+        Plan plan = planBO.getUpComingPlan();
         if(plan != null) {
+            todoTextView.setVisibility(View.VISIBLE);
             todoTextView.setText(plan.getContent());
         }
         else {
             todoTextView.setVisibility(View.GONE);
         }
+    }
+
+    private void callAlarmService() {
+        Intent alarmServiceIntent = new Intent(
+                getApplicationContext(),
+                AlarmServiceReceiver.class);
+        getApplicationContext().sendBroadcast(alarmServiceIntent, null);
     }
 
     private class SlidePagerAdapter extends CustomizeFragmentPagerAdapter
@@ -209,6 +220,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onRefresh(boolean updatePage) {
             refreshTodoText();
+            callAlarmService();
 
             if(updatePage) {
                 update(false);

@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="?android:colorControlHighlight">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item>
-        <selector>
-            <item android:state_checked="true">
-                <shape android:shape="oval">
-                    <solid android:color="@color/colorAccent"/>
-                </shape>
-            </item>
-
-            <item android:state_checked="false" android:drawable="@color/colorNone"/>
-        </selector>
+    <item android:state_checked="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/colorAccent"/>
+        </shape>
     </item>
 
-</ripple>
+    <item android:state_checked="false" android:drawable="@color/colorNone"/>
+
+</selector>

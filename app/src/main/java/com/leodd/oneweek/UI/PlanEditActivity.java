@@ -313,7 +313,11 @@ public class PlanEditActivity extends AppCompatActivity implements TimePickerDia
 
             plan.setDate(new CalendarDate(pendingDate.getDateString() + " " + current.getTimeString()));
 
+            boolean isRecycle = plan.isRecycle();
+
             planBO.updatePlan(plan);
+
+            plan.setRecycle(plan.isRecycle() || isRecycle);
 
             callBack(MODE_UPDATE);
         }
